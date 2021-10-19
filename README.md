@@ -1,11 +1,14 @@
 # Kubernates on AMAZON EKS using terraform
 
-Building K8s cluster in Amazon EKS with terraform using vpc and k8s modules from terraform modules
+Creating a Kubernates cluster on Amazon EKS using Terraform. 
 
+We've used vpc and k8s modules from terraform modules.
+
+
+## Run Amazon CLI inside a docker machine
 
 For convenience (escaping windows command line :') we mount our workspace to a docker environement  (aws cli image) containing all we need.
 
-## Run Amazon CLI inside a docker machine
 ```
 > docker run -it --rm -v ${PWD}:/work -w /work --entrypoint /bin/sh amazon/aws-cli:2.0.43
 
